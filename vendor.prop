@@ -1,5 +1,5 @@
 # Bluetooth
-bluetooth.device.default_name=Realme 9 Pro 5G
+bluetooth.device.default_name=Realme 9 Pro
 
 # Display
 ro.vendor.display.svi=1
@@ -7,4 +7,4 @@ vendor.display.svi.config=1
 vendor.display.svi.config_path=/vendor/etc/SVIConfig_4095.xml
 
 # USB
-vendor.usb.product_string=Realme 9 Pro 5G
+vendor.usb.product_string=realme 9 Pro
