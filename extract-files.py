@@ -28,7 +28,11 @@ blob_fixups: blob_fixups_user_type = {
     ('odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libaps_frame_registration.so', 'odm/lib64/libYTCommon.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
-        .add_needed('libcamera_metadata_shim.so'),
+        .add_needed('libcamera_metadata_shim.so')
+        .sig_replace(
+            'FD 7B BC A9 F8 5F 01 A9 FD 03 00 91 F6 57 02 A9 F4 4F 03 A9 09 A0 40 A9 F3 03 00 AA 3F 01 08 EB E2 00 00 54 68 01 80 52',
+            'C0 03 5F D6 F8 5F 01 A9 FD 03 00 91 F6 57 02 A9 F4 4F 03 A9 09 A0 40 A9 F3 03 00 AA 3F 01 08 EB E2 00 00 54 68 01 80 52',
+        ),
     'vendor/lib64/libmidasserviceintf_aidl.so': blob_fixup()
         .remove_needed('android.frameworks.stats@1.0.so'),
 }  # fmt: skip
